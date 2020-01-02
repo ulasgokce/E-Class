@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Forms;
 
 namespace EClass
 {
-    class GetIn
+    public static class GetIn
     {
         public static int GetInside(string username, string password)
         {
-            int usertype = 2;
+            int usertype = -1;
             ExamEntities db = new ExamEntities();
 
 
@@ -25,12 +26,12 @@ namespace EClass
                 }
                 else
                 {
-                    MessageBox.Show("Geçersiz şifre");
+                    System.Windows.MessageBox.Show("Geçersiz şifre");
                 }
             }
             else
             {
-                MessageBox.Show("Yanlış kullanıcı adı veya şifre girdiniz");
+                System.Windows.MessageBox.Show("Yanlış kullanıcı adı veya şifre girdiniz");
             }
 
             return usertype;

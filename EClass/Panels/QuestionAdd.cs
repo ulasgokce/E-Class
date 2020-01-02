@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -44,47 +43,16 @@ namespace EClass
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            using (ExamEntities db = new ExamEntities())
+            if (txtQuestion.Text == "" || cbCatagory.Text == "" || txtChoice1.Text == "" || txtChoice2.Text == "" || txtChoice3.Text == "" || txtChoice4.Text == "")
             {
-                Random rnd = new Random();
-                Question question = new Question();
-
-                List<Choice> choices = new List<Choice>();
-                Choice choice1 = new Choice();
-                Choice choice2 = new Choice();
-                Choice choice3 = new Choice();
-                Choice choice4 = new Choice();
-
-                question.Question1 = txtQuestion.Text.ToString();
-                question.CatId = db.Catagories.Where(x => x.Name == cbCatagory.Text.ToString()).FirstOrDefault().Id;
-                db.Questions.Add(question);
-
-                choice1.Choice1 = txtChoice1.Text.ToString();
-                choice1.IsCorrect = true;
-                choices.Add(choice1);
-
-                choice2.Choice1 = txtChoice2.Text.ToString();
-                choices.Add(choice2);
-
-                choice3.Choice1 = txtChoice3.Text.ToString();
-                choices.Add(choice3);
-
-                choice4.Choice1 = txtChoice4.Text.ToString();
-                choices.Add(choice4);
-
-
-                var result = choices.Select(x => new { value = x, order = rnd.Next() })
-                            .OrderBy(x => x.order).Select(x => x.value).ToList();
-                foreach (var item in result)
-                {
-                    item.QuestionId = question.Id;
-                    db.Choices.AddOrUpdate(item);
-                }
-                db.SaveChanges();
-                ObjectPasser.Question = null;
-                MessageBox.Show("Soru kaydedildi");
-
+                MessageBox.Show("Alanlar Boş geçilemez");
             }
+            else
+            {
+
+                AddQuestion.AddOrUpdateQuestion(txtQuestion.Text, cbCatagory.Text, txtChoice1.Text, txtChoice2.Text, txtChoice3.Text, txtChoice4.Text);
+            }
+            ObjectPasser.Question = null;
         }
 
 
@@ -108,6 +76,6 @@ namespace EClass
             }
         }
 
-       
+
     }
 }

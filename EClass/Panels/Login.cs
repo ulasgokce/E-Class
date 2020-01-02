@@ -76,6 +76,10 @@ namespace EClass
                             break;
 
                         }
+                    default:
+                        { 
+                        break;
+                        }
                 }
             }
         }

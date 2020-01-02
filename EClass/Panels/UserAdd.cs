@@ -18,24 +18,16 @@ namespace EClass
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (ExamEntities db = new ExamEntities())
-            {
-                User user = new User();
-                user.Username = txtUserName.Text.ToString();
-                user.Password = txtPassword.Text.ToString();
-                if (cbUserType.Text == "Ogrenci")
-                {
-                    user.UserType = 2;
-                }
-                else
-                {
-                    user.UserType = 1;
-                }
-                db.Users.AddOrUpdate(user);
-                db.SaveChanges();
-            }
             ObjectPasser.User = null;
-            MessageBox.Show("Kullanıcı kaydedildi");
+            if(txtUserName.Text == "" || txtPassword.Text == "" || cbUserType.Text == "" )
+            {
+                MessageBox.Show("Alanlar boş geçilemez");
+            }
+            else
+            {
+
+            AddUser.AddOrUpdateUser(txtUserName.Text, txtPassword.Text, cbUserType.Text);
+            }
         }
 
         private void UserAdd_FormClosed(object sender, FormClosedEventArgs e)
