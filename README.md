@@ -4,7 +4,7 @@
 ![](https://lh3.googleusercontent.com/IV3dTfpOsr1lmAbI_fCHvOrC_ooEnlBgVtVRmXPcI3noLKL2449jB7VvPl2yt1nfhk4)
 
 
-**Projenin amacı**
+**Projenin amacı** :
 Öğrencilerin başarısız olduğu konulara yönlendirerek başarıyı kaçınılmaz hale getirmek
 
 
