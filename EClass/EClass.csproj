@@ -60,10 +60,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminPanel.cs">
+    <Compile Include="ExamPrepare.cs" />
+    <Compile Include="GetIn.cs" />
+    <Compile Include="Panels\AdminPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminPanel.Designer.cs">
+    <Compile Include="Panels\AdminPanel.Designer.cs">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Answer.cs">
@@ -75,16 +77,16 @@
     <Compile Include="Choice.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Exam.cs">
+    <Compile Include="Panels\Exam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Exam.Designer.cs">
+    <Compile Include="Panels\Exam.Designer.cs">
       <DependentUpon>Exam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Panels\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Panels\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Model.Context.cs">
@@ -105,25 +107,25 @@
     <Compile Include="ObjectPasser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuestionAdd.cs">
+    <Compile Include="Panels\QuestionAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuestionAdd.Designer.cs">
+    <Compile Include="Panels\QuestionAdd.Designer.cs">
       <DependentUpon>QuestionAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Question.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Statistics.cs">
+    <Compile Include="Panels\Statistics.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Statistics.Designer.cs">
+    <Compile Include="Panels\Statistics.Designer.cs">
       <DependentUpon>Statistics.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentPanel.cs">
+    <Compile Include="Panels\StudentPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentPanel.Designer.cs">
+    <Compile Include="Panels\StudentPanel.Designer.cs">
       <DependentUpon>StudentPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="sysdiagram.cs">
@@ -132,13 +134,12 @@
     <Compile Include="User.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserAdd.cs">
+    <Compile Include="Panels\UserAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserAdd.Designer.cs">
+    <Compile Include="Panels\UserAdd.Designer.cs">
       <DependentUpon>UserAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilities.cs" />
     <Compile Include="VW_AvailableQuestions.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -151,13 +152,13 @@
     <Compile Include="WIP_View.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminPanel.resx">
+    <EmbeddedResource Include="Panels\AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Exam.resx">
+    <EmbeddedResource Include="Panels\Exam.resx">
       <DependentUpon>Exam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Panels\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -169,16 +170,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QuestionAdd.resx">
+    <EmbeddedResource Include="Panels\QuestionAdd.resx">
       <DependentUpon>QuestionAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Statistics.resx">
+    <EmbeddedResource Include="Panels\Statistics.resx">
       <DependentUpon>Statistics.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentPanel.resx">
+    <EmbeddedResource Include="Panels\StudentPanel.resx">
       <DependentUpon>StudentPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserAdd.resx">
+    <EmbeddedResource Include="Panels\UserAdd.resx">
       <DependentUpon>UserAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model.edmx">

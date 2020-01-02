@@ -111,7 +111,7 @@ namespace EClass
             db.Answers.Add(answer);
             db.SaveChanges();
             nextClick++;
-            if (nextClick == 7)
+            if (nextClick == 7 && ObjectPasser.QuestionList[nextClick]==null)
             {
                 MessageBox.Show("Testi bitirdiniz Tebrikler");
                 this.Close();

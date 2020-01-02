@@ -1,23 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EClass
 {
     public partial class Login : Form
     {
-       
+
         public Login()
         {
             InitializeComponent();
             txtPassword.UseSystemPasswordChar = PasswordPropertyTextAttribute.Yes.Password;
-            if(rbRememberMe.Checked == true)
+            if (rbRememberMe.Checked == true)
             {
                 //TODO : Last Login will save to somewhere and will be pulled next start
             }
@@ -47,51 +41,50 @@ namespace EClass
                 isChecked = false;
             }
         }
-             #endregion
+        #endregion
 
         private void Login_Click(object sender, EventArgs e)
         {
-            using(ExamEntities db = new ExamEntities())
+            using (ExamEntities db = new ExamEntities())
             {
-                var user = db.Users.Where(x => x.Username == txtUserName.Text).FirstOrDefault();
-                if (user!=null)
+
+                switch (GetIn.GetInside(txtUserName.Text, txtPassword.Text))
                 {
-                    if (user.Password == txtPassword.Text)
-                    {
-                        ObjectPasser.UserLoggedIn = user;
-                        if(user.UserType == 0)
+                    case 0:
                         {
                             //TODO: Admin Login
                             this.Hide();
                             AdminPanel ap = new AdminPanel();
                             ap.Show();
-                            
+                            break;
+
                         }
-                        else if(user.UserType == 1)
+                    case 1:
                         {
                             //TODO: Teacher Login
                             this.Hide();
                             QuestionAdd qa = new QuestionAdd();
                             qa.Show();
+                            break;
                         }
-                        else
+                    case 2:
                         {
                             //TODO: Student Login
                             this.Hide();
                             StudentPanel sp = new StudentPanel();
                             sp.Show();
+                            break;
 
                         }
-                    }
                 }
             }
         }
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
-           Application.Exit();
+            Application.Exit();
         }
 
-     
+
     }
 }

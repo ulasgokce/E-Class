@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace EClass
 {
-    public static class Utilities
+    public class ExamPrepare
     {
-      
+          
+   
     }
 }
-   
-   
-

@@ -35,6 +35,7 @@ namespace EClass
                 db.SaveChanges();
             }
             ObjectPasser.User = null;
+            MessageBox.Show("Kullanıcı kaydedildi");
         }
 
         private void UserAdd_FormClosed(object sender, FormClosedEventArgs e)
