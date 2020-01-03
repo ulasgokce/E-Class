@@ -56,6 +56,7 @@
             // txtChoice4
             // 
             this.txtChoice4.Location = new System.Drawing.Point(221, 235);
+            this.txtChoice4.MaxLength = 350;
             this.txtChoice4.Multiline = true;
             this.txtChoice4.Name = "txtChoice4";
             this.txtChoice4.Size = new System.Drawing.Size(100, 20);
@@ -72,6 +73,7 @@
             // txtChoice1
             // 
             this.txtChoice1.Location = new System.Drawing.Point(52, 157);
+            this.txtChoice1.MaxLength = 350;
             this.txtChoice1.Multiline = true;
             this.txtChoice1.Name = "txtChoice1";
             this.txtChoice1.Size = new System.Drawing.Size(100, 20);
@@ -80,6 +82,7 @@
             // txtChoice3
             // 
             this.txtChoice3.Location = new System.Drawing.Point(52, 235);
+            this.txtChoice3.MaxLength = 350;
             this.txtChoice3.Multiline = true;
             this.txtChoice3.Name = "txtChoice3";
             this.txtChoice3.Size = new System.Drawing.Size(100, 20);
@@ -88,6 +91,7 @@
             // txtQuestion
             // 
             this.txtQuestion.Location = new System.Drawing.Point(39, 38);
+            this.txtQuestion.MaxLength = 350;
             this.txtQuestion.Multiline = true;
             this.txtQuestion.Name = "txtQuestion";
             this.txtQuestion.Size = new System.Drawing.Size(160, 92);
@@ -155,7 +159,7 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Kategoriler :";
             // 
-            // QuestinAdd
+            // QuestionAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,7 +177,7 @@
             this.Controls.Add(this.txtChoice2);
             this.Controls.Add(this.txtChoice4);
             this.Controls.Add(this.btnSave);
-            this.Name = "QuestinAdd";
+            this.Name = "QuestionAdd";
             this.Text = "TeacherLogin";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QuestinAdd_FormClosed);
             this.Load += new System.EventHandler(this.QuestinAdd_Load);

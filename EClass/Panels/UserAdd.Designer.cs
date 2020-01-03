@@ -77,6 +77,7 @@
             // txtUserName
             // 
             this.txtUserName.Location = new System.Drawing.Point(27, 49);
+            this.txtUserName.MaxLength = 350;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(100, 20);
             this.txtUserName.TabIndex = 4;
@@ -84,6 +85,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(27, 129);
+            this.txtPassword.MaxLength = 350;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 5;
